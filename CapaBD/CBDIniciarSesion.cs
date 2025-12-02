@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CapaTabla
+namespace CapaBD
 {
-    public class Class1
+    internal class CBDIniciarSesion
     {
+
     }
 }

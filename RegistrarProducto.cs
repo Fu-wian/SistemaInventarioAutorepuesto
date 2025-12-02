@@ -16,5 +16,10 @@ namespace SistemaInventarioAutorepuesto
         {
             InitializeComponent();
         }
+
+        private void lbCantidad_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
