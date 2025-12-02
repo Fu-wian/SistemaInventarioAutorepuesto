@@ -38,62 +38,68 @@
             // btnIngresar
             // 
             this.btnIngresar.Font = new System.Drawing.Font("Monotype Corsiva", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.Location = new System.Drawing.Point(248, 227);
+            this.btnIngresar.Location = new System.Drawing.Point(331, 279);
+            this.btnIngresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(125, 66);
+            this.btnIngresar.Size = new System.Drawing.Size(167, 81);
             this.btnIngresar.TabIndex = 0;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // lblCodigoEmpleado
             // 
             this.lblCodigoEmpleado.AutoSize = true;
             this.lblCodigoEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoEmpleado.Location = new System.Drawing.Point(183, 54);
+            this.lblCodigoEmpleado.Location = new System.Drawing.Point(244, 66);
+            this.lblCodigoEmpleado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodigoEmpleado.Name = "lblCodigoEmpleado";
-            this.lblCodigoEmpleado.Size = new System.Drawing.Size(256, 24);
+            this.lblCodigoEmpleado.Size = new System.Drawing.Size(327, 29);
             this.lblCodigoEmpleado.TabIndex = 1;
             this.lblCodigoEmpleado.Text = "Ingrese su Codigo Empleado";
             // 
             // txtCodigoEmpleado
             // 
             this.txtCodigoEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoEmpleado.Location = new System.Drawing.Point(187, 81);
+            this.txtCodigoEmpleado.Location = new System.Drawing.Point(249, 100);
+            this.txtCodigoEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCodigoEmpleado.Name = "txtCodigoEmpleado";
-            this.txtCodigoEmpleado.Size = new System.Drawing.Size(239, 26);
+            this.txtCodigoEmpleado.Size = new System.Drawing.Size(317, 30);
             this.txtCodigoEmpleado.TabIndex = 2;
             // 
             // lblContra
             // 
             this.lblContra.AutoSize = true;
             this.lblContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContra.Location = new System.Drawing.Point(183, 123);
+            this.lblContra.Location = new System.Drawing.Point(244, 151);
+            this.lblContra.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContra.Name = "lblContra";
-            this.lblContra.Size = new System.Drawing.Size(199, 24);
+            this.lblContra.Size = new System.Drawing.Size(254, 29);
             this.lblContra.TabIndex = 3;
             this.lblContra.Text = "Ingrese su Contraseña";
             // 
             // txtContra
             // 
             this.txtContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContra.Location = new System.Drawing.Point(187, 161);
+            this.txtContra.Location = new System.Drawing.Point(249, 198);
+            this.txtContra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtContra.MaxLength = 150;
             this.txtContra.Name = "txtContra";
             this.txtContra.PasswordChar = '*';
-            this.txtContra.Size = new System.Drawing.Size(239, 26);
+            this.txtContra.Size = new System.Drawing.Size(317, 30);
             this.txtContra.TabIndex = 4;
             // 
             // IniciarSesion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtContra);
             this.Controls.Add(this.lblContra);
             this.Controls.Add(this.txtCodigoEmpleado);
             this.Controls.Add(this.lblCodigoEmpleado);
             this.Controls.Add(this.btnIngresar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "IniciarSesion";
             this.Text = "Iniciar Sesion";
             this.ResumeLayout(false);
