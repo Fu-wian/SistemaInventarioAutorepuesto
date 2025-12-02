@@ -16,5 +16,12 @@ namespace SistemaInventarioAutorepuesto
         {
             InitializeComponent();
         }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            PantallaPrincipal frmPrincipal = new PantallaPrincipal();
+            frmPrincipal.Show();
+            this.Hide();
+        }
     }
 }
