@@ -25,7 +25,7 @@ namespace CapaLogica
                 return datos.Login(usuario, clave);
             }
             catch (Exception ex)
-            {
+    {
                 throw new Exception("Error en la capa lógica (CLIniciarSesion.Login): " + ex.Message, ex);
             }
         }

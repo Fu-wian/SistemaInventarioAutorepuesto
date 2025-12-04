@@ -30,7 +30,7 @@ namespace CapaBD
                     if (dr.Read())
                     {
                         return new CTPersonal
-                        {
+    {
                             IDemp = dr["IDemp"].ToString(),
                             Nombre = dr["Nombre"].ToString(),
                             Apellido = dr["Apellido"].ToString(),
