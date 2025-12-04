@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaTabla;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,21 @@ namespace SistemaInventarioAutorepuesto
 {
     public partial class PantallaPrincipal : Form
     {
-        public PantallaPrincipal()
+        public PantallaPrincipal(CTPersonal persona)
         {
             InitializeComponent();
+            if (persona.IDRol == 1) // administrador
+            {
+                btnRegistrar.Enabled = true;
+                btnEditar.Enabled = true;
+                btnBuscar.Enabled = true;
+            }
+            else if (persona.IDRol == 2) // vendedor
+            {
+                btnRegistrar.Enabled = false;
+                btnEditar.Enabled = false;
+                btnBuscar.Enabled = true;
+            }
         }
 
         private void PantallaPrincipal_Load(object sender, EventArgs e)
