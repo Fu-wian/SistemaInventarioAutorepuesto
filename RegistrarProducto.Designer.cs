@@ -63,9 +63,7 @@
             this.lbCantidad.Name = "lbCantidad";
             this.lbCantidad.Size = new System.Drawing.Size(113, 30);
             this.lbCantidad.TabIndex = 24;
-            this.lbCantidad.Text = "Cantidad";
-            this.lbCantidad.Click += new System.EventHandler(this.lbCantidad_Click);
-            // 
+            this.lbCantidad.Text = "Cantidad";            // 
             // txtPrecio
             // 
             this.txtPrecio.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
