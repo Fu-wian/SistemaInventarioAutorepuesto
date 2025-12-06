@@ -144,6 +144,7 @@
             this.btnFacturar.TabIndex = 9;
             this.btnFacturar.Text = "Facturar";
             this.btnFacturar.UseVisualStyleBackColor = true;
+            this.btnFacturar.Click += new System.EventHandler(this.btnFacturar_Click);
             // 
             // btnCotizar
             // 
@@ -154,6 +155,7 @@
             this.btnCotizar.TabIndex = 10;
             this.btnCotizar.Text = "Cotizar";
             this.btnCotizar.UseVisualStyleBackColor = true;
+            this.btnCotizar.Click += new System.EventHandler(this.btnCotizar_Click);
             // 
             // PantallaPrincipal
             // 
