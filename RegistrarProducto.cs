@@ -89,5 +89,7 @@ namespace SistemaInventarioAutorepuesto
             nudCantidad.Value = 0;
             cbCategoria.SelectedIndex = -1;
         }
+
+     
     }
 }

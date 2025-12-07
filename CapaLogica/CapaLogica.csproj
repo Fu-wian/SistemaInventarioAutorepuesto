@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CLEditarProductos.cs" />
     <Compile Include="CLRegistrarProducto.cs" />
     <Compile Include="CLIniciarSesion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

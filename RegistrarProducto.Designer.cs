@@ -115,7 +115,7 @@
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(121, 33);
             this.cbCategoria.TabIndex = 19;
-            // 
+            
             // lbCategoria
             // 
             this.lbCategoria.AutoSize = true;

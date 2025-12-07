@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="CBDIniciarSesion.cs" />
     <Compile Include="CBRegistrarProductos.cs" />
+    <Compile Include="CBEditarProductos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
