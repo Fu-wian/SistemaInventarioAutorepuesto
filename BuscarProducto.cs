@@ -20,11 +20,13 @@ namespace SistemaInventarioAutorepuesto
         //crear un stored procedure para buscar en db
 
         private CLBuscarProductos logicaBuscar;
+        private PantallaPrincipal pantallaPrincipal;
 
-        public BuscarProducto()
-        {
+        public BuscarProducto(PantallaPrincipal principal)
+        {   
             InitializeComponent();
             logicaBuscar = new CLBuscarProductos();
+            pantallaPrincipal = principal;
         }
 
         private void ConfigurarDataGridView()
@@ -171,33 +173,36 @@ namespace SistemaInventarioAutorepuesto
         //cuando da doble click a un elemtno de dgv tiene que agregar esa informacion a la facturacion del menu principal
         //cuando el administrador busca un producto es de vista solamente
 
-        private void dgvProductos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvProductos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.RowIndex < dgvProductos.Rows.Count)
+            if (e.RowIndex >= 0)
             {
                 try
                 {
                     DataGridViewRow row = dgvProductos.Rows[e.RowIndex];
 
-                    MessageBox.Show(
-                        $"Producto seleccionado:\n\n" +
-                        $"Código: {row.Cells["colCodigo"].Value}\n" +
-                        $"Nombre: {row.Cells["colNombre"].Value}\n" +
-                        $"Categoría: {row.Cells["colCategoria"].Value}\n" +
-                        $"Cantidad: {row.Cells["colCantidad"].Value}\n" +
-                        $"Precio: {Convert.ToDecimal(row.Cells["colPrecio"].Value):C}",
-                        "Producto Seleccionado",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information
+                    // Crear un producto basado en la fila seleccionada
+                    CTProductos producto = new CTProductos(
+                        row.Cells["IDProductos"].Value.ToString(),
+                        Convert.ToString(row.Cells["Categoria"].Value),
+                        row.Cells["NombreProducto"].Value.ToString(),
+                        Convert.ToInt32(row.Cells["Cantidad"].Value),
+                        Convert.ToDecimal(row.Cells["Precio"].Value)
                     );
+
+                    // Enviar a la factura usando el método del formulario principal
+                    pantallaPrincipal.AgregarProductosAFactura(new List<CTProductos> { producto });
+
+                    // Opcional: cerrar la ventana después de seleccionar
+                    this.Close();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Error al obtener producto: {ex.Message}", "Error",
-                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Error al obtener producto: {ex.Message}");
                 }
             }
         }
+
     }
 }
 

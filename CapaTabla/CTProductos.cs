@@ -7,6 +7,7 @@
         public string NombreProducto { get; set; }
         public int Cantidad { get; set; }
         public decimal Precio { get; set; }
+        //public string descCategoria { get; set; }
 
         public CTProductos(string idProductos, string categoria, string nombreProducto, int cantidad, decimal precio)
         {
