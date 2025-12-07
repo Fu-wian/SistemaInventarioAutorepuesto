@@ -175,7 +175,6 @@
             this.Controls.Add(this.lbFecha);
             this.Name = "PantallaPrincipal";
             this.Text = "PantallaPrincipal";
-            this.Load += new System.EventHandler(this.PantallaPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFactura)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
