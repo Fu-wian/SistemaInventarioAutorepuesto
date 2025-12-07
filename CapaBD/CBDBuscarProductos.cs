@@ -7,7 +7,7 @@ namespace CapaBD
 {
     public class CBDBuscarProductos
     {
-        private string conexion = "Server = greglai; Database=AutorepuestoInventario; Integrated Security=true;";
+        private string conexion = "Server = DESKTOP-9ITF4PC\\SQLEXPRESS; Database=AutorepuestoInventario; Integrated Security=true;";
 
         // Método para buscar por ID
         public CTProductos BuscarPorID(string idProducto)

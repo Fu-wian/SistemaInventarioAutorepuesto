@@ -16,7 +16,7 @@ namespace SistemaInventarioAutorepuesto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BuscarProducto());
+            Application.Run(new IniciarSesion());
         }
     }
 }
