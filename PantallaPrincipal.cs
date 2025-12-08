@@ -59,6 +59,9 @@ namespace SistemaInventarioAutorepuesto
             dgvFactura.RowHeadersVisible = false;
             dgvFactura.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
+            lbCalculoTotal.Visible = false;
+            lbCalculoTotal.Text = string.Empty;
+
             // Asegurar que cuando se vincule o cambie la data, se redistribuya el ancho (FillWeight)
             dgvFactura.DataBindingComplete += (s, ev) =>
             {
@@ -131,10 +134,19 @@ namespace SistemaInventarioAutorepuesto
         {
             DataTable tabla = ConvertirDgvATabla(dgvFactura);
 
+            if (tabla == null || tabla.Rows.Count == 0)
+            {
+                // Hide total until there's at least one product
+                lbCalculoTotal.Visible = false;
+                lbCalculoTotal.Text = string.Empty;
+                return;
+            }
+
             decimal subtotal = logicaFacturacion.CalcularSubtotal(tabla);
             var (impuesto, total) = logicaFacturacion.CalcularTotal(subtotal);
 
             lbCalculoTotal.Text = total.ToString("C2");
+            lbCalculoTotal.Visible = true;
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -256,6 +268,7 @@ namespace SistemaInventarioAutorepuesto
                             p.Precio));
                     }
                 }
+                ActualizarTotal();
             }
             catch (Exception ex)
             {
