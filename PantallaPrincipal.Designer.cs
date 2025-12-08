@@ -85,7 +85,6 @@
             this.dgvFactura.RowTemplate.Height = 24;
             this.dgvFactura.Size = new System.Drawing.Size(692, 444);
             this.dgvFactura.TabIndex = 3;
-            this.dgvFactura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFactura_CellContentClick);
             // 
             // lbTotal
             // 
@@ -155,6 +154,7 @@
             this.btnFacturar.TabIndex = 9;
             this.btnFacturar.Text = "Facturar";
             this.btnFacturar.UseVisualStyleBackColor = true;
+            this.btnFacturar.Click += new System.EventHandler(this.btnFacturar_Click);
             // 
             // btnCotizar
             // 
@@ -166,6 +166,7 @@
             this.btnCotizar.TabIndex = 10;
             this.btnCotizar.Text = "Cotizar";
             this.btnCotizar.UseVisualStyleBackColor = true;
+            this.btnCotizar.Click += new System.EventHandler(this.btnCotizar_Click);
             // 
             // PantallaPrincipal
             // 
@@ -186,7 +187,6 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PantallaPrincipal";
             this.Text = "PantallaPrincipal";
-            this.Load += new System.EventHandler(this.PantallaPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFactura)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

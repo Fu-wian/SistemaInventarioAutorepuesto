@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CTFactura.cs" />
+    <Compile Include="CTFacturaDetalle.cs" />
     <Compile Include="CTPersonal.cs" />
     <Compile Include="CTProductos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CLFactura.cs" />
     <Compile Include="CLBuscarProductos.cs" />
     <Compile Include="CLIniciarSesion.cs" />
+    <Compile Include="CLFacturacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
