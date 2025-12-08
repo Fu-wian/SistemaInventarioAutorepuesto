@@ -43,7 +43,10 @@
   <ItemGroup>
     <Compile Include="CLEditarProductos.cs" />
     <Compile Include="CLRegistrarProducto.cs" />
+    <Compile Include="CLFactura.cs" />
+    <Compile Include="CLBuscarProductos.cs" />
     <Compile Include="CLIniciarSesion.cs" />
+    <Compile Include="CLFacturacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
