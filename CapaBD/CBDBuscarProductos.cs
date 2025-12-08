@@ -10,7 +10,7 @@ namespace CapaBD
         private string conexion = "Server = DESKTOP-9ITF4PC\\SQLEXPRESS; Database=AutorepuestoInventario; Integrated Security=true;";
 
         // Método para buscar por ID
-        public CTProductos BuscarPorID(string idProducto)
+        public CTProductosDGV BuscarPorID(string idProducto)
         {
             try
             {
@@ -26,7 +26,7 @@ namespace CapaBD
 
                     if (dr.Read())
                     {
-                        return new CTProductos
+                        return new CTProductosDGV
                         {
                             IDProductos = dr["IDProducto"].ToString(),
                             Categoria = Convert.ToString(dr["IDCategoria"]),
@@ -46,9 +46,9 @@ namespace CapaBD
         }
 
         // Método para buscar por nombre
-        public List<CTProductos> BuscarPorNombre(string nombreP)
+        public List<CTProductosDGV> BuscarPorNombre(string nombreP)
         {
-            List<CTProductos> lista = new List<CTProductos>();
+            List<CTProductosDGV> lista = new List<CTProductosDGV>();
 
             try
             {
@@ -64,7 +64,7 @@ namespace CapaBD
 
                     while (dr.Read())
                     {
-                        lista.Add(new CTProductos
+                        lista.Add(new CTProductosDGV
                         {
                             IDProductos = dr["IDProducto"].ToString(),
                             Categoria = Convert.ToString(dr["IDCategoria"]),
@@ -84,9 +84,9 @@ namespace CapaBD
         }
 
         // Método para buscar por categoría (descripcion)
-        public List<CTProductos> BuscarPorCategoria(string descripcionCategoria)
+        public List<CTProductosDGV> BuscarPorCategoria(string descripcionCategoria)
         {
-            List<CTProductos> lista = new List<CTProductos>();
+            List<CTProductosDGV> lista = new List<CTProductosDGV>();
 
             try
             {
@@ -102,7 +102,7 @@ namespace CapaBD
 
                     while (dr.Read())
                     {
-                        lista.Add(new CTProductos
+                        lista.Add(new CTProductosDGV
                         {
                             IDProductos = dr["IDProducto"].ToString(),
                             Categoria = Convert.ToString(dr["IDCategoria"]),

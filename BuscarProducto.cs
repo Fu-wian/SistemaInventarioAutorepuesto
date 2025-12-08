@@ -117,32 +117,32 @@ namespace SistemaInventarioAutorepuesto
                 string filtro = cbCategorias.SelectedItem.ToString();
                 string texto = txtCodigo.Text?.Trim() ?? string.Empty;
 
-                List<CTProductos> productos = new List<CTProductos>();
+                List<CTProductosDGV> productos = new List<CTProductosDGV>();
 
                 // Determinar acción según el filtro seleccionado
                 switch (filtro)
                 {
                     case "Nombre":
                         // BuscarPorNombre espera el texto a buscar en el nombre
-                        productos = logicaBuscar.BuscarPorNombre(texto) ?? new List<CTProductos>();
+                        productos = logicaBuscar.BuscarPorNombre(texto) ?? new List<CTProductosDGV>();
                         break;
 
                     case "Categoria":
                         // BuscarPorCategoria espera la descripción de la categoría
-                        productos = logicaBuscar.BuscarPorCategoria(texto) ?? new List<CTProductos>();
+                        productos = logicaBuscar.BuscarPorCategoria(texto) ?? new List<CTProductosDGV>();
                         break;
 
                     case "Codigo":
                         // BuscarPorID devuelve un solo objeto; convertir a lista para enlazar al DGV
-                        CTProductos producto = logicaBuscar.BuscarPorID(texto);
+                        CTProductosDGV producto = logicaBuscar.BuscarPorID(texto);
                         if (producto != null)
-                            productos = new List<CTProductos> { producto };
+                            productos = new List<CTProductosDGV> { producto };
                         else
-                            productos = new List<CTProductos>();
+                            productos = new List<CTProductosDGV>();
                         break;
 
                     default:
-                        productos = new List<CTProductos>();
+                        productos = new List<CTProductosDGV>();
                         break;
                 }
 
@@ -182,7 +182,7 @@ namespace SistemaInventarioAutorepuesto
                     DataGridViewRow row = dgvProductos.Rows[e.RowIndex];
 
                     // Crear un producto basado en la fila seleccionada
-                    CTProductos producto = new CTProductos(
+                    CTProductosDGV producto = new CTProductosDGV(
                         row.Cells["IDProductos"].Value.ToString(),
                         Convert.ToString(row.Cells["Categoria"].Value),
                         row.Cells["NombreProducto"].Value.ToString(),
@@ -191,7 +191,7 @@ namespace SistemaInventarioAutorepuesto
                     );
 
                     // Enviar a la factura usando el método del formulario principal
-                    pantallaPrincipal.AgregarProductosAFactura(new List<CTProductos> { producto });
+                    pantallaPrincipal.AgregarProductosAFactura(new List<CTProductosDGV> { producto });
 
                     // Opcional: cerrar la ventana después de seleccionar
                     this.Close();

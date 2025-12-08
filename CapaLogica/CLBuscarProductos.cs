@@ -9,7 +9,7 @@ namespace CapaLogica
     {
         CBDBuscarProductos buscarProductos = new CBDBuscarProductos();
 
-        public CTProductos BuscarPorID(string idProducto)
+        public CTProductosDGV BuscarPorID(string idProducto)
         {
             try
             {
@@ -26,13 +26,13 @@ namespace CapaLogica
             }
         }
 
-        public List<CTProductos> BuscarPorNombre(string nombreP)
+        public List<CTProductosDGV> BuscarPorNombre(string nombreP)
         {
             try
             {
                 if (string.IsNullOrWhiteSpace(nombreP))
                 {
-                    return new List<CTProductos>(); // Lista vacía
+                    return new List<CTProductosDGV>(); // Lista vacía
                 }
 
                 return buscarProductos.BuscarPorNombre(nombreP);
@@ -43,13 +43,13 @@ namespace CapaLogica
             }
         }
 
-        public List<CTProductos> BuscarPorCategoria(string descripcionCategoria)
+        public List<CTProductosDGV> BuscarPorCategoria(string descripcionCategoria)
         {
             try
             {
                 if (string.IsNullOrWhiteSpace(descripcionCategoria))
                 {
-                    return new List<CTProductos>(); // Lista vacía
+                    return new List<CTProductosDGV>(); // Lista vacía
                 }
 
                 return buscarProductos.BuscarPorCategoria(descripcionCategoria);

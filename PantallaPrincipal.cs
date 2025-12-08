@@ -152,45 +152,45 @@ namespace SistemaInventarioAutorepuesto
         }
 
         // MÉTODO IMPORTANTE — Permite recibir productos desde el formulario BuscarProducto
-        public void AgregarProductosAFactura(IEnumerable<CTProductos> productos)
+        public void AgregarProductosAFactura(IEnumerable<CTProductosDGV> productos)
         {
             if (productos == null) return;
 
             try
             {
-                BindingList<CTProductos> binding;
+                BindingList<CTProductosDGV> binding;
 
                 // Si no hay DataSource, crear uno nuevo basado en la lista recibida
                 if (dgvFactura.DataSource == null)
                 {
-                    var lista = productos.Select(p => new CTProductos(
+                    var lista = productos.Select(p => new CTProductosDGV(
                         p.IDProductos,
                         p.Categoria,
                         p.NombreProducto,
                         p.Cantidad,
                         p.Precio)).ToList();
 
-                    binding = new BindingList<CTProductos>(lista);
+                    binding = new BindingList<CTProductosDGV>(lista);
                     dgvFactura.DataSource = binding;
                 }
                 else
                 {
-                    binding = dgvFactura.DataSource as BindingList<CTProductos>;
+                    binding = dgvFactura.DataSource as BindingList<CTProductosDGV>;
 
                     if (binding == null)
                     {
                         // Intentar convertir la fuente existente a BindingList
-                        var existing = (dgvFactura.DataSource as IEnumerable<CTProductos>)?.ToList()
-                                       ?? new List<CTProductos>();
+                        var existing = (dgvFactura.DataSource as IEnumerable<CTProductosDGV>)?.ToList()
+                                       ?? new List<CTProductosDGV>();
 
-                        binding = new BindingList<CTProductos>(existing);
+                        binding = new BindingList<CTProductosDGV>(existing);
                         dgvFactura.DataSource = binding;
                     }
 
                     // Añadir cada producto recibido como nueva fila
                     foreach (var p in productos)
                     {
-                        binding.Add(new CTProductos(
+                        binding.Add(new CTProductosDGV(
                             p.IDProductos,
                             p.Categoria,
                             p.NombreProducto,

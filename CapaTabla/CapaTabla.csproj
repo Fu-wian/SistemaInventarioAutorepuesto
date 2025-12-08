@@ -46,6 +46,7 @@
     <Compile Include="CTFactura.cs" />
     <Compile Include="CTFacturaDetalle.cs" />
     <Compile Include="CTPersonal.cs" />
+    <Compile Include="CTProductosDGV.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
