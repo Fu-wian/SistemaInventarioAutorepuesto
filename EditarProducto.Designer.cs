@@ -41,39 +41,43 @@
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.lbCantidad = new System.Windows.Forms.Label();
             this.nudCantidad = new System.Windows.Forms.NumericUpDown();
+            this.btConfirmar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBuscarEditar
             // 
             this.btnBuscarEditar.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarEditar.Location = new System.Drawing.Point(62, 323);
+            this.btnBuscarEditar.Location = new System.Drawing.Point(12, 323);
             this.btnBuscarEditar.Name = "btnBuscarEditar";
             this.btnBuscarEditar.Size = new System.Drawing.Size(160, 87);
             this.btnBuscarEditar.TabIndex = 0;
             this.btnBuscarEditar.Text = "Buscar";
             this.btnBuscarEditar.UseVisualStyleBackColor = true;
+            this.btnBuscarEditar.Click += new System.EventHandler(this.btnBuscarEditar_Click);
             // 
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(325, 323);
+            this.btnEditar.Location = new System.Drawing.Point(209, 323);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(160, 87);
             this.btnEditar.TabIndex = 1;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnBorrar
             // 
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnBorrar.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrar.Location = new System.Drawing.Point(575, 323);
+            this.btnBorrar.Location = new System.Drawing.Point(407, 323);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(160, 87);
             this.btnBorrar.TabIndex = 2;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // lbCodigo
             // 
@@ -171,11 +175,24 @@
             this.nudCantidad.Size = new System.Drawing.Size(120, 30);
             this.nudCantidad.TabIndex = 12;
             // 
+            // btConfirmar
+            // 
+            this.btConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btConfirmar.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btConfirmar.Location = new System.Drawing.Point(614, 323);
+            this.btConfirmar.Name = "btConfirmar";
+            this.btConfirmar.Size = new System.Drawing.Size(160, 87);
+            this.btConfirmar.TabIndex = 13;
+            this.btConfirmar.Text = "Confirmar";
+            this.btConfirmar.UseVisualStyleBackColor = true;
+            this.btConfirmar.Click += new System.EventHandler(this.btConfirmar_Click);
+            // 
             // EditarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btConfirmar);
             this.Controls.Add(this.nudCantidad);
             this.Controls.Add(this.lbCantidad);
             this.Controls.Add(this.txtPrecio);
@@ -191,6 +208,7 @@
             this.Controls.Add(this.btnBuscarEditar);
             this.Name = "EditarProducto";
             this.Text = "EditarProducto";
+            this.Load += new System.EventHandler(this.EditarProducto_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -212,5 +230,6 @@
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label lbCantidad;
         private System.Windows.Forms.NumericUpDown nudCantidad;
+        private System.Windows.Forms.Button btConfirmar;
     }
 }

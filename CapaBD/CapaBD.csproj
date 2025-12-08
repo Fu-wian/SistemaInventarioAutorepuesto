@@ -45,6 +45,8 @@
     <Compile Include="CBDFacturaDetalle.cs" />
     <Compile Include="CBDBuscarProductos.cs" />
     <Compile Include="CBDIniciarSesion.cs" />
+    <Compile Include="CBRegistrarProductos.cs" />
+    <Compile Include="CBEditarProductos.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

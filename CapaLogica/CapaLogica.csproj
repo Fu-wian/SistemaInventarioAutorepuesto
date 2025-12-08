@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CLEditarProductos.cs" />
+    <Compile Include="CLRegistrarProducto.cs" />
     <Compile Include="CLFactura.cs" />
     <Compile Include="CLBuscarProductos.cs" />
     <Compile Include="CLIniciarSesion.cs" />

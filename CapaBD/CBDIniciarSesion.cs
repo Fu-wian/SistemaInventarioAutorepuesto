@@ -10,7 +10,7 @@ namespace CapaBD
 {
     public class CBIniciarSesion
     {
-        private string conexion = "Server= DESKTOP-9ITF4PC\\SQLEXPRESS; Database=AutorepuestoInventario; Integrated Security=true;";
+        private string conexion = "Server = DESKTOP-9ITF4PC\\SQLEXPRESS; Database=AutorepuestoInventario; Integrated Security=True;";
 
         public CTPersonal Login(string usuario, string clave)
         {

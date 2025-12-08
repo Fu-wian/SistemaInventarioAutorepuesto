@@ -1,24 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 ﻿namespace CapaTabla
 {
     public class CTProductos
     {
-        public string IDProductos { get; set; }
-        public string Categoria { get; set; }
-        public string NombreProducto { get; set; }
-        public int Cantidad { get; set; }
-        public decimal Precio { get; set; }
+        // ----- Campos reales de la tabla SQL -----
+        public string IDProducto { get; set; }          // varchar(8)
+        public int IDCategoria { get; set; }            // int
+        public string NombreProducto { get; set; }      // varchar(100)
+        public int Cantidad { get; set; }               // int
+        public decimal PrecioUnidad { get; set; }       // decimal
 
-        public CTProductos(string idProductos, string categoria, string nombreProducto, int cantidad, decimal precio)
+        // ----- Campos adicionales para la vista (DGV) -----
+        public string Categoria { get; set; }           // nombre de categoría
+        public decimal Precio { get; set; }             // precio para mostrar
+
+        // ----- Constructor vacío -----
+        public CTProductos() {}
+
+        // ----- Constructor para vista (DataGridView) -----
+        public CTProductos(string idProducto, string categoria, string nombreProducto, int cantidad, decimal precio)
         {
-            IDProductos = idProductos.Trim();
-            Categoria = categoria.Trim();
-            NombreProducto = nombreProducto.Trim();
+            IDProducto = idProducto?.Trim();
+            Categoria = categoria?.Trim();
+            NombreProducto = nombreProducto?.Trim();
             Cantidad = cantidad;
-            Precio = precio;
-        }
 
-        public CTProductos()
-        {
+            // Precio mostrado = PrecioUnidad
+            Precio = precio;
+            PrecioUnidad = precio;   // sincronización
         }
     }
 }
