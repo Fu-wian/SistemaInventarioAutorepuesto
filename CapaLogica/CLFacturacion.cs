@@ -9,7 +9,7 @@ namespace CapaLogica
 {
     public class CLFacturacion
     {
-        //columnas "Cantidad" y "PrecioUnidad"
+        //columnas "Cantidad" y "PrecioUnitario"
         public decimal CalcularSubtotal(DataTable tabla)
         {
             decimal subtotal = 0m;
@@ -17,10 +17,10 @@ namespace CapaLogica
                 return subtotal;
             foreach (DataRow row in tabla.Rows)
             {
-                if (row["Cantidad"] == DBNull.Value || row["PrecioUnidad"] == DBNull.Value)
+                if (row["Cantidad"] == DBNull.Value || row["Precio"] == DBNull.Value)
                     continue;
                 int cantidad = Convert.ToInt32(row["Cantidad"]);
-                decimal precio = Convert.ToDecimal(row["PrecioUnidad"]);
+                decimal precio = Convert.ToDecimal(row["Precio"]);
                 subtotal += cantidad * precio;
             }
             return subtotal;

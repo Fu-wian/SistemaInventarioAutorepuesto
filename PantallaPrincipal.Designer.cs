@@ -85,7 +85,6 @@
             this.dgvFactura.RowTemplate.Height = 24;
             this.dgvFactura.Size = new System.Drawing.Size(692, 444);
             this.dgvFactura.TabIndex = 3;
-            this.dgvFactura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFactura_CellContentClick);
             // 
             // lbTotal
             // 

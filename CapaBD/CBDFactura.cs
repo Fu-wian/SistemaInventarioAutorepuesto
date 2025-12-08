@@ -43,9 +43,9 @@ namespace CapaBD
                         "VALUES (@IDFactura, @IDProducto, @Cantidad, @PrecioUnitario)", con);
 
                     cmd.Parameters.AddWithValue("@IDFactura", idFactura);
-                    cmd.Parameters.AddWithValue("@IDProducto", row["IDProducto"]);
+                    cmd.Parameters.AddWithValue("@IDProducto", row["IDProductos"]);
                     cmd.Parameters.AddWithValue("@Cantidad", row["Cantidad"]);
-                    cmd.Parameters.AddWithValue("@PrecioUnitario", row["PrecioUnitario"]);
+                    cmd.Parameters.AddWithValue("@PrecioUnitario", row["Precio"]);
 
                     cmd.ExecuteNonQuery();
                 }
