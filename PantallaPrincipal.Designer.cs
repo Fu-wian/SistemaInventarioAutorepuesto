@@ -46,9 +46,10 @@
             // 
             this.lbFecha.AutoSize = true;
             this.lbFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbFecha.Location = new System.Drawing.Point(84, 54);
+            this.lbFecha.Location = new System.Drawing.Point(63, 44);
+            this.lbFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbFecha.Name = "lbFecha";
-            this.lbFecha.Size = new System.Drawing.Size(131, 46);
+            this.lbFecha.Size = new System.Drawing.Size(106, 37);
             this.lbFecha.TabIndex = 0;
             this.lbFecha.Text = "Fecha";
             // 
@@ -56,9 +57,10 @@
             // 
             this.lbNombreSistema.AutoSize = true;
             this.lbNombreSistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNombreSistema.Location = new System.Drawing.Point(536, 54);
+            this.lbNombreSistema.Location = new System.Drawing.Point(402, 44);
+            this.lbNombreSistema.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbNombreSistema.Name = "lbNombreSistema";
-            this.lbNombreSistema.Size = new System.Drawing.Size(317, 46);
+            this.lbNombreSistema.Size = new System.Drawing.Size(256, 37);
             this.lbNombreSistema.TabIndex = 1;
             this.lbNombreSistema.Text = "Nombre Sistema";
             // 
@@ -66,29 +68,33 @@
             // 
             this.lbNombreUsuario.AutoSize = true;
             this.lbNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNombreUsuario.Location = new System.Drawing.Point(1168, 54);
+            this.lbNombreUsuario.Location = new System.Drawing.Point(876, 44);
+            this.lbNombreUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbNombreUsuario.Name = "lbNombreUsuario";
-            this.lbNombreUsuario.Size = new System.Drawing.Size(311, 46);
+            this.lbNombreUsuario.Size = new System.Drawing.Size(252, 37);
             this.lbNombreUsuario.TabIndex = 2;
             this.lbNombreUsuario.Text = "Nombre Usuario";
             // 
             // dgvFactura
             // 
             this.dgvFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFactura.Location = new System.Drawing.Point(92, 172);
+            this.dgvFactura.Location = new System.Drawing.Point(69, 140);
+            this.dgvFactura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvFactura.Name = "dgvFactura";
             this.dgvFactura.RowHeadersWidth = 51;
             this.dgvFactura.RowTemplate.Height = 24;
-            this.dgvFactura.Size = new System.Drawing.Size(923, 546);
+            this.dgvFactura.Size = new System.Drawing.Size(692, 444);
             this.dgvFactura.TabIndex = 3;
+            this.dgvFactura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFactura_CellContentClick);
             // 
             // lbTotal
             // 
             this.lbTotal.AutoSize = true;
             this.lbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotal.Location = new System.Drawing.Point(663, 731);
+            this.lbTotal.Location = new System.Drawing.Point(497, 594);
+            this.lbTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTotal.Name = "lbTotal";
-            this.lbTotal.Size = new System.Drawing.Size(120, 46);
+            this.lbTotal.Size = new System.Drawing.Size(98, 37);
             this.lbTotal.TabIndex = 4;
             this.lbTotal.Text = "Total:";
             // 
@@ -96,18 +102,20 @@
             // 
             this.lbCalculoTotal.AutoSize = true;
             this.lbCalculoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCalculoTotal.Location = new System.Drawing.Point(789, 731);
+            this.lbCalculoTotal.Location = new System.Drawing.Point(592, 594);
+            this.lbCalculoTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbCalculoTotal.Name = "lbCalculoTotal";
-            this.lbCalculoTotal.Size = new System.Drawing.Size(226, 42);
+            this.lbCalculoTotal.Size = new System.Drawing.Size(181, 36);
             this.lbCalculoTotal.TabIndex = 5;
             this.lbCalculoTotal.Text = "CalculoTotal";
             // 
             // btnRegistrar
             // 
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Tai Le", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(1068, 172);
+            this.btnRegistrar.Location = new System.Drawing.Point(801, 140);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(194, 94);
+            this.btnRegistrar.Size = new System.Drawing.Size(146, 76);
             this.btnRegistrar.TabIndex = 6;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
@@ -116,9 +124,10 @@
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Tai Le", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(1315, 172);
+            this.btnEditar.Location = new System.Drawing.Point(986, 140);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(194, 94);
+            this.btnEditar.Size = new System.Drawing.Size(146, 76);
             this.btnEditar.TabIndex = 7;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -127,9 +136,10 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Tai Le", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(1187, 354);
+            this.btnBuscar.Location = new System.Drawing.Point(890, 288);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(194, 94);
+            this.btnBuscar.Size = new System.Drawing.Size(146, 76);
             this.btnBuscar.TabIndex = 8;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -138,9 +148,10 @@
             // btnFacturar
             // 
             this.btnFacturar.Font = new System.Drawing.Font("Microsoft Tai Le", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFacturar.Location = new System.Drawing.Point(1068, 538);
+            this.btnFacturar.Location = new System.Drawing.Point(801, 437);
+            this.btnFacturar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFacturar.Name = "btnFacturar";
-            this.btnFacturar.Size = new System.Drawing.Size(194, 94);
+            this.btnFacturar.Size = new System.Drawing.Size(146, 76);
             this.btnFacturar.TabIndex = 9;
             this.btnFacturar.Text = "Facturar";
             this.btnFacturar.UseVisualStyleBackColor = true;
@@ -149,9 +160,10 @@
             // btnCotizar
             // 
             this.btnCotizar.Font = new System.Drawing.Font("Microsoft Tai Le", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCotizar.Location = new System.Drawing.Point(1315, 538);
+            this.btnCotizar.Location = new System.Drawing.Point(986, 437);
+            this.btnCotizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCotizar.Name = "btnCotizar";
-            this.btnCotizar.Size = new System.Drawing.Size(194, 94);
+            this.btnCotizar.Size = new System.Drawing.Size(146, 76);
             this.btnCotizar.TabIndex = 10;
             this.btnCotizar.Text = "Cotizar";
             this.btnCotizar.UseVisualStyleBackColor = true;
@@ -159,9 +171,9 @@
             // 
             // PantallaPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1587, 796);
+            this.ClientSize = new System.Drawing.Size(1190, 647);
             this.Controls.Add(this.btnCotizar);
             this.Controls.Add(this.btnFacturar);
             this.Controls.Add(this.btnBuscar);
@@ -173,6 +185,7 @@
             this.Controls.Add(this.lbNombreUsuario);
             this.Controls.Add(this.lbNombreSistema);
             this.Controls.Add(this.lbFecha);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PantallaPrincipal";
             this.Text = "PantallaPrincipal";
             ((System.ComponentModel.ISupportInitialize)(this.dgvFactura)).EndInit();

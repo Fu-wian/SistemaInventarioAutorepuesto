@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="CBDFactura.cs" />
     <Compile Include="CBDFacturaDetalle.cs" />
+    <Compile Include="CBDBuscarProductos.cs" />
     <Compile Include="CBDIniciarSesion.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

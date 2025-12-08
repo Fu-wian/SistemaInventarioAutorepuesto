@@ -16,6 +16,7 @@ namespace SistemaInventarioAutorepuesto
     {
         private CTPersonal usuarioActual;
         private CLFacturacion logicaFacturacion = new CLFacturacion();
+
         public PantallaPrincipal(CTPersonal persona)
         {
             InitializeComponent();
@@ -42,6 +43,8 @@ namespace SistemaInventarioAutorepuesto
             dgvFactura.RowsRemoved += (s, ev) => ActualizarTotal();
             dgvFactura.UserAddedRow += (s, ev) => ActualizarTotal();
         }
+
+        // Convierte el DataGridView a un DataTable
         private DataTable ConvertirDgvATabla(DataGridView dgv)
         {
             DataTable dt = new DataTable();
@@ -67,6 +70,8 @@ namespace SistemaInventarioAutorepuesto
 
             return dt;
         }
+
+        // Recalcula los totales
         private void ActualizarTotal()
         {
             DataTable tabla = ConvertirDgvATabla(dgvFactura);
@@ -76,6 +81,7 @@ namespace SistemaInventarioAutorepuesto
 
             lbCalculoTotal.Text = total.ToString("C2");
         }
+
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             RegistrarProducto frmRegistrar = new RegistrarProducto();
@@ -90,9 +96,11 @@ namespace SistemaInventarioAutorepuesto
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            BuscarProducto frmBuscar = new BuscarProducto();
+            // Usamos la versión del master para poder retornar productos a la factura
+            BuscarProducto frmBuscar = new BuscarProducto(this);
             frmBuscar.Show();
         }
+
         private void btnCotizar_Click(object sender, EventArgs e)
         {
             DataTable tabla = ConvertirDgvATabla(dgvFactura);
@@ -116,6 +124,7 @@ namespace SistemaInventarioAutorepuesto
                 MessageBox.Show("No hay productos para facturar.");
                 return;
             }
+
             decimal subtotal = logicaFacturacion.CalcularSubtotal(tabla);
             var (impuesto, total) = logicaFacturacion.CalcularTotal(subtotal);
 
@@ -137,9 +146,64 @@ namespace SistemaInventarioAutorepuesto
 
             MessageBox.Show("Factura registrada con éxito. ID: " + idFactura);
 
-            // Mostrar factura
+            // Mostrar factura final
             Factura frm = new Factura(tabla, subtotal, impuesto, total);
             frm.ShowDialog();
+        }
+
+        // MÉTODO IMPORTANTE — Permite recibir productos desde el formulario BuscarProducto
+        public void AgregarProductosAFactura(IEnumerable<CTProductos> productos)
+        {
+            if (productos == null) return;
+
+            try
+            {
+                BindingList<CTProductos> binding;
+
+                // Si no hay DataSource, crear uno nuevo basado en la lista recibida
+                if (dgvFactura.DataSource == null)
+                {
+                    var lista = productos.Select(p => new CTProductos(
+                        p.IDProductos,
+                        p.Categoria,
+                        p.NombreProducto,
+                        p.Cantidad,
+                        p.Precio)).ToList();
+
+                    binding = new BindingList<CTProductos>(lista);
+                    dgvFactura.DataSource = binding;
+                }
+                else
+                {
+                    binding = dgvFactura.DataSource as BindingList<CTProductos>;
+
+                    if (binding == null)
+                    {
+                        // Intentar convertir la fuente existente a BindingList
+                        var existing = (dgvFactura.DataSource as IEnumerable<CTProductos>)?.ToList()
+                                       ?? new List<CTProductos>();
+
+                        binding = new BindingList<CTProductos>(existing);
+                        dgvFactura.DataSource = binding;
+                    }
+
+                    // Añadir cada producto recibido como nueva fila
+                    foreach (var p in productos)
+                    {
+                        binding.Add(new CTProductos(
+                            p.IDProductos,
+                            p.Categoria,
+                            p.NombreProducto,
+                            p.Cantidad,
+                            p.Precio));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al agregar productos a la factura: {ex.Message}",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
