@@ -7,7 +7,7 @@ namespace CapaBD
 {
     public class CBDBuscarProductos
     {
-        private string conexion = "Server = GREGLAI; Database=AutorepuestoInventario; Integrated Security=true;";
+        private string conexion = "Server = DESKTOP-9ITF4PC\\SQLEXPRESS; Database=AutorepuestoInventario; Integrated Security=true;";
 
         // Método para buscar por ID
         public CTProductos BuscarPorID(string idProducto)
@@ -41,7 +41,7 @@ namespace CapaBD
             }
             catch (Exception ex)
             {
-                throw new Exception("Error en la capa BD (BuscarPorID): " + ex.Message);
+                throw new Exception("Error al Buscar Por ID: " + ex.Message);
             }
         }
 
@@ -79,7 +79,7 @@ namespace CapaBD
             }
             catch (Exception ex)
             {
-                throw new Exception("Error en la capa BD (BuscarPorNombre): " + ex.Message);
+                throw new Exception("Error al Buscar Por Nombre: " + ex.Message);
             }
         }
 
@@ -117,7 +117,7 @@ namespace CapaBD
             }
             catch (Exception ex)
             {
-                throw new Exception("Error en la capa BD (BuscarPorCategoria): " + ex.Message);
+                throw new Exception("Error al Buscar Por Categoria: " + ex.Message);
             }
         }
     }
