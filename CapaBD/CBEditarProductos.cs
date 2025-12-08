@@ -6,7 +6,7 @@ namespace CapaBD
 {
     public class CBEditarProductos
     {
-        private string conexion = "Server= -CLEAKSITO-\\SQLEXPRESS; Database=AutorepuestoInventario; Integrated Security=True;";
+        private string conexion = "Server= DESKTOP-9ITF4PC\\SQLEXPRESS; Database=AutorepuestoInventario; Integrated Security=True;";
 
 
         //buscar productos
