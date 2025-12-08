@@ -8,15 +8,13 @@ using System.Threading.Tasks;
 
 namespace CapaBD
 {
-    public class CBIniciarSesion
+    public class CBIniciarSesion : Conexion
     {
-        private string conexion = "Server = DESKTOP-9ITF4PC\\SQLEXPRESS; Database=AutorepuestoInventario; Integrated Security=True;";
-
         public CTPersonal Login(string usuario, string clave)
         {
             try
             {
-                using (SqlConnection cn = new SqlConnection(conexion))
+                using (SqlConnection cn = ObtenerConexion())
                 {
                     SqlCommand cmd = new SqlCommand("SP_LoginPersonal", cn);
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;

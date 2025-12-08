@@ -5,15 +5,13 @@ using CapaTabla;
 
 namespace CapaBD
 {
-    public class CBDRegistrarProductos
+    public class CBDRegistrarProductos : Conexion
     {
-        private string conexion = "Server= DESKTOP-9ITF4PC\\SQLEXPRESS; Database=AutorepuestoInventario; Integrated Security=True;";
-
         public bool RegistrarProducto(CTProductos obj)
         {
             try
             {
-                using (SqlConnection cn = new SqlConnection(conexion))
+                using (SqlConnection cn = ObtenerConexion())
                 using (SqlCommand cmd = new SqlCommand("SP_RegistrarProducto", cn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;

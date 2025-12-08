@@ -85,18 +85,6 @@ namespace SistemaInventarioAutorepuesto
             }
         }
 
-        private void txtCodigo_TextChanged(object sender, EventArgs e)
-        {
-            //no tiene restricciones, quizas convertir lo buscado a minuscula o encontrar una forma de buscarse con mayuscula/minuscula
-            //
-        }
-
-        private void cbCategorias_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //
-
-        }
-
         private void btnBuscar_Click_1(object sender, EventArgs e)
         {
             try
@@ -161,9 +149,6 @@ namespace SistemaInventarioAutorepuesto
                 );
             }
         }
-
-        //cuando da doble click a un elemtno de dgv tiene que agregar esa informacion a la facturacion del menu principal
-        //cuando el administrador busca un producto es de vista solamente
 
         private void dgvProductos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {

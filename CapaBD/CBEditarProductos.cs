@@ -4,15 +4,12 @@ using System.Data.SqlClient;
 using CapaTabla;
 namespace CapaBD
 {
-    public class CBEditarProductos
+    public class CBEditarProductos : Conexion
     {
-        private string conexion = "Server= DESKTOP-9ITF4PC\\SQLEXPRESS; Database=AutorepuestoInventario; Integrated Security=True;";
-
-
         //buscar productos
         public CTProductos BuscarProducto(string idProducto)
         {
-            using (SqlConnection cn = new SqlConnection(conexion))
+            using (SqlConnection cn = ObtenerConexion())
             {
                 using (SqlCommand cmd = new SqlCommand("SP_BuscarProducto", cn))
                 {
@@ -53,7 +50,7 @@ namespace CapaBD
         //borrar productos
         public int EliminarProducto(string idProducto)
         {
-            using (SqlConnection cn = new SqlConnection(conexion))
+            using (SqlConnection cn = ObtenerConexion())
             {
                 using (SqlCommand cmd = new SqlCommand("SP_EliminarProducto", cn))
                 {
@@ -77,7 +74,7 @@ namespace CapaBD
         //actualizar productos
         public int ActualizarProducto(CTProductos obj)
         {
-            using (SqlConnection cn = new SqlConnection(conexion))
+            using (SqlConnection cn = ObtenerConexion())
             using (SqlCommand cmd = new SqlCommand("SP_ActualizarProducto", cn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;

@@ -5,9 +5,8 @@ using System.Data.SqlClient;
 
 namespace CapaBD
 {
-    public class CBDBuscarProductos
+    public class CBDBuscarProductos : Conexion
     {
-        private string conexion = "Server = DESKTOP-9ITF4PC\\SQLEXPRESS; Database=AutorepuestoInventario; Integrated Security=true;";
 
         // Método para buscar por ID
         public List<CTProductosDGV> BuscarPorID(string idProducto)
@@ -16,7 +15,7 @@ namespace CapaBD
             {
                 List<CTProductosDGV> lista = new List<CTProductosDGV>();
 
-                using (SqlConnection cn = new SqlConnection(conexion))
+                using (SqlConnection cn = ObtenerConexion())
                 {
                     SqlCommand cmd = new SqlCommand("SP_BuscarPorID", cn);
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
@@ -53,7 +52,7 @@ namespace CapaBD
 
             try
             {
-                using (SqlConnection cn = new SqlConnection(conexion))
+                using (SqlConnection cn = ObtenerConexion())
                 {
                     SqlCommand cmd = new SqlCommand("SP_BuscarPorNombre", cn);
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
@@ -91,7 +90,7 @@ namespace CapaBD
 
             try
             {
-                using (SqlConnection cn = new SqlConnection(conexion))
+                using (SqlConnection cn = ObtenerConexion())
                 {
                     SqlCommand cmd = new SqlCommand("SP_BuscarPorCategoria", cn);
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;

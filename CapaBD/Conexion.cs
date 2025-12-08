@@ -12,8 +12,6 @@ namespace CapaBD
         protected SqlConnection ObtenerConexion()
         {
             return new SqlConnection("Data Source=DESKTOP-9ITF4PC\\SQLEXPRESS;Initial Catalog=AutorepuestoInventario;Integrated Security=True;"
-
-
             );
         }
     }
