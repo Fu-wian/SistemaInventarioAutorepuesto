@@ -9,7 +9,7 @@ namespace CapaLogica
     {
         CBDBuscarProductos buscarProductos = new CBDBuscarProductos();
 
-        public CTProductosDGV BuscarPorID(string idProducto)
+        public List<CTProductosDGV> BuscarPorID(string idProducto)
         {
             try
             {

@@ -160,11 +160,11 @@ namespace SistemaInventarioAutorepuesto
         {
             var categorias = new List<KeyValuePair<int, string>>()
             {
-                new KeyValuePair<int, string>(1, "Categoria 1"),
-                new KeyValuePair<int, string>(2, "Categoria 2"),
-                new KeyValuePair<int, string>(3, "Categoria 3"),
-                new KeyValuePair<int, string>(4, "Categoria 4"),
-                new KeyValuePair<int, string>(5, "Categoria 5"),
+                new KeyValuePair<int, string>(1, "Motor"),
+                new KeyValuePair<int, string>(2, "Sistema de Frenos"),
+                new KeyValuePair<int, string>(3, "Transmision"),
+                new KeyValuePair<int, string>(4, "Sistema Electrico"),
+                new KeyValuePair<int, string>(5, "Suspension y dirección")
             };
 
             cbCategoria.DataSource = new BindingSource(categorias, null);

@@ -46,7 +46,7 @@ namespace CapaBD
             }
             catch (Exception ex)
             {
-                throw new Exception("Error en la capa BD (CBIniciarSesion.Login): " + ex.Message, ex);
+                throw new Exception("Error al consultar la base de datos: " + ex.Message, ex);
             }
         }
     }

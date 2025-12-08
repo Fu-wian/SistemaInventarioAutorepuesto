@@ -19,14 +19,14 @@ namespace CapaLogica
                 if (string.IsNullOrWhiteSpace(usuario) ||
                     string.IsNullOrWhiteSpace(clave))
                 {
-                    return null; // error controlado
+                    return null;
                 }
 
                 return datos.Login(usuario, clave);
             }
             catch (Exception ex)
     {
-                throw new Exception("Error en la capa lógica (CLIniciarSesion.Login): " + ex.Message, ex);
+                throw new Exception("Error: " + ex.Message, ex);
             }
         }
     }

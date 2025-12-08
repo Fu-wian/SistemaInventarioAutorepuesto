@@ -32,55 +32,96 @@
             this.lbSubtotal = new System.Windows.Forms.Label();
             this.lbImpuesto = new System.Windows.Forms.Label();
             this.lbTotal = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFactura)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvFactura
             // 
             this.dgvFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFactura.Location = new System.Drawing.Point(97, 138);
+            this.dgvFactura.Location = new System.Drawing.Point(27, 25);
+            this.dgvFactura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvFactura.Name = "dgvFactura";
             this.dgvFactura.RowHeadersWidth = 51;
             this.dgvFactura.RowTemplate.Height = 24;
-            this.dgvFactura.Size = new System.Drawing.Size(240, 150);
+            this.dgvFactura.Size = new System.Drawing.Size(552, 483);
             this.dgvFactura.TabIndex = 0;
             // 
             // lbSubtotal
             // 
             this.lbSubtotal.AutoSize = true;
-            this.lbSubtotal.Location = new System.Drawing.Point(485, 158);
+            this.lbSubtotal.Location = new System.Drawing.Point(716, 444);
+            this.lbSubtotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbSubtotal.Name = "lbSubtotal";
-            this.lbSubtotal.Size = new System.Drawing.Size(56, 16);
+            this.lbSubtotal.Size = new System.Drawing.Size(46, 13);
             this.lbSubtotal.TabIndex = 1;
             this.lbSubtotal.Text = "Subtotal";
             // 
             // lbImpuesto
             // 
             this.lbImpuesto.AutoSize = true;
-            this.lbImpuesto.Location = new System.Drawing.Point(485, 221);
+            this.lbImpuesto.Location = new System.Drawing.Point(716, 470);
+            this.lbImpuesto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbImpuesto.Name = "lbImpuesto";
-            this.lbImpuesto.Size = new System.Drawing.Size(62, 16);
+            this.lbImpuesto.Size = new System.Drawing.Size(50, 13);
             this.lbImpuesto.TabIndex = 2;
             this.lbImpuesto.Text = "Impuesto";
             // 
             // lbTotal
             // 
             this.lbTotal.AutoSize = true;
-            this.lbTotal.Location = new System.Drawing.Point(485, 281);
+            this.lbTotal.Location = new System.Drawing.Point(716, 495);
+            this.lbTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTotal.Name = "lbTotal";
-            this.lbTotal.Size = new System.Drawing.Size(38, 16);
+            this.lbTotal.Size = new System.Drawing.Size(31, 13);
             this.lbTotal.TabIndex = 3;
             this.lbTotal.Text = "Total";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(624, 438);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 24);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Subtotal";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(624, 462);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 24);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Impuesto";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(624, 487);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 24);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Total";
+            // 
             // Factura
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(851, 551);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lbTotal);
             this.Controls.Add(this.lbImpuesto);
             this.Controls.Add(this.lbSubtotal);
             this.Controls.Add(this.dgvFactura);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Factura";
             this.Text = "Factura";
             ((System.ComponentModel.ISupportInitialize)(this.dgvFactura)).EndInit();
@@ -95,5 +136,8 @@
         private System.Windows.Forms.Label lbSubtotal;
         private System.Windows.Forms.Label lbImpuesto;
         private System.Windows.Forms.Label lbTotal;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

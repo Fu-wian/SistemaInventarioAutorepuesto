@@ -45,11 +45,11 @@
             // lbFecha
             // 
             this.lbFecha.AutoSize = true;
-            this.lbFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbFecha.Location = new System.Drawing.Point(63, 44);
+            this.lbFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFecha.Location = new System.Drawing.Point(878, 9);
             this.lbFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbFecha.Name = "lbFecha";
-            this.lbFecha.Size = new System.Drawing.Size(106, 37);
+            this.lbFecha.Size = new System.Drawing.Size(72, 25);
             this.lbFecha.TabIndex = 0;
             this.lbFecha.Text = "Fecha";
             // 
@@ -57,12 +57,12 @@
             // 
             this.lbNombreSistema.AutoSize = true;
             this.lbNombreSistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNombreSistema.Location = new System.Drawing.Point(402, 44);
+            this.lbNombreSistema.Location = new System.Drawing.Point(62, 44);
             this.lbNombreSistema.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbNombreSistema.Name = "lbNombreSistema";
-            this.lbNombreSistema.Size = new System.Drawing.Size(256, 37);
+            this.lbNombreSistema.Size = new System.Drawing.Size(458, 37);
             this.lbNombreSistema.TabIndex = 1;
-            this.lbNombreSistema.Text = "Nombre Sistema";
+            this.lbNombreSistema.Text = "AUTOREPUESTO GREGOGO";
             // 
             // lbNombreUsuario
             // 
@@ -79,7 +79,7 @@
             // 
             this.dgvFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFactura.Location = new System.Drawing.Point(69, 140);
-            this.dgvFactura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvFactura.Margin = new System.Windows.Forms.Padding(2);
             this.dgvFactura.Name = "dgvFactura";
             this.dgvFactura.RowHeadersWidth = 51;
             this.dgvFactura.RowTemplate.Height = 24;
@@ -112,7 +112,7 @@
             // 
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Tai Le", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.Location = new System.Drawing.Point(801, 140);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(146, 76);
             this.btnRegistrar.TabIndex = 6;
@@ -124,7 +124,7 @@
             // 
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Tai Le", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Location = new System.Drawing.Point(986, 140);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(146, 76);
             this.btnEditar.TabIndex = 7;
@@ -136,7 +136,7 @@
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Tai Le", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Location = new System.Drawing.Point(890, 288);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(146, 76);
             this.btnBuscar.TabIndex = 8;
@@ -148,7 +148,7 @@
             // 
             this.btnFacturar.Font = new System.Drawing.Font("Microsoft Tai Le", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFacturar.Location = new System.Drawing.Point(801, 437);
-            this.btnFacturar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFacturar.Margin = new System.Windows.Forms.Padding(2);
             this.btnFacturar.Name = "btnFacturar";
             this.btnFacturar.Size = new System.Drawing.Size(146, 76);
             this.btnFacturar.TabIndex = 9;
@@ -160,7 +160,7 @@
             // 
             this.btnCotizar.Font = new System.Drawing.Font("Microsoft Tai Le", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCotizar.Location = new System.Drawing.Point(986, 437);
-            this.btnCotizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCotizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCotizar.Name = "btnCotizar";
             this.btnCotizar.Size = new System.Drawing.Size(146, 76);
             this.btnCotizar.TabIndex = 10;
@@ -184,7 +184,7 @@
             this.Controls.Add(this.lbNombreUsuario);
             this.Controls.Add(this.lbNombreSistema);
             this.Controls.Add(this.lbFecha);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PantallaPrincipal";
             this.Text = "PantallaPrincipal";
             ((System.ComponentModel.ISupportInitialize)(this.dgvFactura)).EndInit();

@@ -59,24 +59,24 @@ namespace SistemaInventarioAutorepuesto
 
         private void FormatearColumnasDGV()//Cambiar de acuerdo al Formato del Base de Datos
         {
-            // Asegurarse de usar los nombres de propiedades correctos de CTProductos
+            // Asegurarse de usar los nombres de propiedades correctos de CTProductosDGV
             if (dgvProductos.Columns.Contains("IDProductos"))
             {
-                dgvProductos.Columns["IDProductos"].Width = 100;
+                dgvProductos.Columns["IDProductos"].Width = 120;
             }
 
             if (dgvProductos.Columns.Contains("Categoria"))
             {
-                dgvProductos.Columns["Categoria"].Width = 100;
+                dgvProductos.Columns["Categoria"].Width = 120;
             }
 
             if (dgvProductos.Columns.Contains("NombreProducto"))
             {
-                dgvProductos.Columns["NombreProducto"].Width = 150;
+                dgvProductos.Columns["NombreProducto"].Width = 200;
             }
             if (dgvProductos.Columns.Contains("Cantidad"))
             {
-                dgvProductos.Columns["Cantidad"].Width = 80;
+                dgvProductos.Columns["Cantidad"].Width = 100;
             }
             if (dgvProductos.Columns.Contains("Precio"))
             {
@@ -133,16 +133,8 @@ namespace SistemaInventarioAutorepuesto
                         break;
 
                     case "Codigo":
-                        // BuscarPorID devuelve un solo objeto; convertir a lista para enlazar al DGV
-                        CTProductosDGV producto = logicaBuscar.BuscarPorID(texto);
-                        if (producto != null)
-                            productos = new List<CTProductosDGV> { producto };
-                        else
-                            productos = new List<CTProductosDGV>();
-                        break;
-
-                    default:
-                        productos = new List<CTProductosDGV>();
+                        // BuscarPorCodigo espera la descripción del codigo
+                        productos = logicaBuscar.BuscarPorID(texto) ?? new List<CTProductosDGV>();
                         break;
                 }
 

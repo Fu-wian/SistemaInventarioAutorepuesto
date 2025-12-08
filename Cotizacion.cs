@@ -12,10 +12,14 @@ namespace SistemaInventarioAutorepuesto
 {
     public partial class Cotizacion : Form
     {
-            public Cotizacion(DataTable tabla)
+            public Cotizacion(DataTable tabla, decimal subtotal, decimal impuesto, decimal total)
         {
             InitializeComponent();
             dgvCotizacion.DataSource = tabla;
+            lbSubtotal.Text = subtotal.ToString("C2");
+            lbImpuesto.Text = impuesto.ToString("C2");
+            lbTotal.Text = total.ToString("C2");
         }
     }
 }
+

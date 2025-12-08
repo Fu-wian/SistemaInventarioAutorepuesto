@@ -22,11 +22,11 @@ namespace SistemaInventarioAutorepuesto
         {
             var categorias = new List<KeyValuePair<int, string>>()
             {
-                new KeyValuePair<int, string>(1, "Categoría 1"),
-                new KeyValuePair<int, string>(2, "Categoría 2"),
-                new KeyValuePair<int, string>(3, "Categoría 3"),
-                new KeyValuePair<int, string>(4, "Categoría 4"),
-                new KeyValuePair<int, string>(5, "Categoría 5"),
+                new KeyValuePair<int, string>(1, "Motor"),
+                new KeyValuePair<int, string>(2, "Sistema de Frenos"),
+                new KeyValuePair<int, string>(3, "Transmision"),
+                new KeyValuePair<int, string>(4, "Sistema Electrico"),
+                new KeyValuePair<int, string>(5, "Suspension y dirección"),
             };
 
             cbCategoria.DataSource = new BindingSource(categorias, null);
@@ -89,7 +89,5 @@ namespace SistemaInventarioAutorepuesto
             nudCantidad.Value = 0;
             cbCategoria.SelectedIndex = -1;
         }
-
-     
     }
 }

@@ -24,6 +24,20 @@ namespace SistemaInventarioAutorepuesto
             // Guardamos el usuario para usarlo en toda la clase
             usuarioActual = persona;
 
+            // Mostrar fecha del sistema
+            lbFecha.Text = DateTime.Now.ToString("D"); // long date in current culture
+
+            // Mostrar nombre de usuario (Nombre + Apellido) si disponible, si no usar IDemp
+            if (!string.IsNullOrWhiteSpace(usuarioActual?.Nombre) ||
+                !string.IsNullOrWhiteSpace(usuarioActual?.Apellido))
+            {
+                lbNombreUsuario.Text = $"{usuarioActual.Nombre} {usuarioActual.Apellido}".Trim();
+            }
+            else if (!string.IsNullOrWhiteSpace(usuarioActual?.IDemp))
+            {
+                lbNombreUsuario.Text = usuarioActual.IDemp;
+            }
+
             // Controlar permisos por rol
             if (persona.IDRol == 1) // administrador
             {
@@ -37,6 +51,47 @@ namespace SistemaInventarioAutorepuesto
                 btnEditar.Enabled = false;
                 btnBuscar.Enabled = true;
             }
+
+
+            // Configurar el DataGridView para que las columnas ocupen todo el ancho disponible
+            dgvFactura.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvFactura.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            dgvFactura.RowHeadersVisible = false;
+            dgvFactura.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            // Asegurar que cuando se vincule o cambie la data, se redistribuya el ancho (FillWeight)
+            dgvFactura.DataBindingComplete += (s, ev) =>
+            {
+                dgvFactura.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                foreach (DataGridViewColumn col in dgvFactura.Columns)
+                {
+                    switch (col.Name)
+                    {
+                        case "IDProductos":
+                            col.FillWeight = 15;
+                            break;
+                        case "Categoria":
+                            col.FillWeight = 20;
+                            break;
+                        case "NombreProducto":
+                            col.FillWeight = 40;
+                            break;
+                        case "Cantidad":
+                            col.FillWeight = 10;
+                            col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                            break;
+                        case "Precio":
+                            col.FillWeight = 15;
+                            col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                            col.DefaultCellStyle.Format = "N2";
+                            break;
+                        default:
+                            col.FillWeight = 10;
+                            break;
+                    }
+                }
+            };
 
             // Eventos del DataGridView para actualizar total automáticamente
             dgvFactura.CellValueChanged += (s, ev) => ActualizarTotal();
@@ -111,7 +166,10 @@ namespace SistemaInventarioAutorepuesto
                 return;
             }
 
-            Cotizacion frm = new Cotizacion(tabla);
+            decimal subtotal = logicaFacturacion.CalcularSubtotal(tabla);
+            var (impuesto, total) = logicaFacturacion.CalcularTotal(subtotal);
+
+            Cotizacion frm = new Cotizacion(tabla, subtotal, impuesto, total);
             frm.ShowDialog();
         }
 

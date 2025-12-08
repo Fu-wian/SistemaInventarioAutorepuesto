@@ -10,10 +10,12 @@ namespace CapaBD
         private string conexion = "Server = DESKTOP-9ITF4PC\\SQLEXPRESS; Database=AutorepuestoInventario; Integrated Security=true;";
 
         // Método para buscar por ID
-        public CTProductosDGV BuscarPorID(string idProducto)
+        public List<CTProductosDGV> BuscarPorID(string idProducto)
         {
             try
             {
+                List<CTProductosDGV> lista = new List<CTProductosDGV>();
+
                 using (SqlConnection cn = new SqlConnection(conexion))
                 {
                     SqlCommand cmd = new SqlCommand("SP_BuscarPorID", cn);
@@ -24,20 +26,19 @@ namespace CapaBD
                     cn.Open();
                     SqlDataReader dr = cmd.ExecuteReader();
 
-                    if (dr.Read())
+                    while (dr.Read())
                     {
-                        return new CTProductosDGV
+                        lista.Add(new CTProductosDGV
                         {
                             IDProductos = dr["IDProducto"].ToString(),
                             Categoria = Convert.ToString(dr["IDCategoria"]),
                             NombreProducto = dr["NombreProducto"].ToString(),
                             Cantidad = Convert.ToInt32(dr["Cantidad"]),
                             Precio = Convert.ToDecimal(dr["PrecioUnidad"])
-                        };
+                        });
                     }
-
-                    return null;
                 }
+                return lista;
             }
             catch (Exception ex)
             {

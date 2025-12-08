@@ -43,17 +43,17 @@
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.RowHeadersWidth = 51;
             this.dgvProductos.RowTemplate.Height = 24;
-            this.dgvProductos.Size = new System.Drawing.Size(548, 282);
+            this.dgvProductos.Size = new System.Drawing.Size(692, 444);
             this.dgvProductos.TabIndex = 0;
             this.dgvProductos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentDoubleClick);
             // 
             // txtCodigo
             // 
             this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(22, 310);
+            this.txtCodigo.Location = new System.Drawing.Point(22, 465);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(142, 28);
+            this.txtCodigo.Size = new System.Drawing.Size(215, 28);
             this.txtCodigo.TabIndex = 1;
             // 
             // cbCategorias
@@ -64,15 +64,15 @@
             "Nombre",
             "Categoria",
             "Codigo"});
-            this.cbCategorias.Location = new System.Drawing.Point(222, 310);
+            this.cbCategorias.Location = new System.Drawing.Point(289, 465);
             this.cbCategorias.Margin = new System.Windows.Forms.Padding(2);
             this.cbCategorias.Name = "cbCategorias";
-            this.cbCategorias.Size = new System.Drawing.Size(140, 30);
+            this.cbCategorias.Size = new System.Drawing.Size(195, 30);
             this.cbCategorias.TabIndex = 2;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(429, 309);
+            this.btnBuscar.Location = new System.Drawing.Point(574, 466);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(140, 30);
@@ -85,7 +85,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(734, 507);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.cbCategorias);
             this.Controls.Add(this.txtCodigo);

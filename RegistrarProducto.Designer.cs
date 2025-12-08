@@ -45,59 +45,65 @@
             // nudCantidad
             // 
             this.nudCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudCantidad.Location = new System.Drawing.Point(181, 219);
+            this.nudCantidad.Location = new System.Drawing.Point(136, 178);
+            this.nudCantidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nudCantidad.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
             this.nudCantidad.Name = "nudCantidad";
-            this.nudCantidad.Size = new System.Drawing.Size(120, 30);
+            this.nudCantidad.Size = new System.Drawing.Size(90, 26);
             this.nudCantidad.TabIndex = 25;
             // 
             // lbCantidad
             // 
             this.lbCantidad.AutoSize = true;
             this.lbCantidad.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCantidad.Location = new System.Drawing.Point(62, 219);
+            this.lbCantidad.Location = new System.Drawing.Point(46, 178);
+            this.lbCantidad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbCantidad.Name = "lbCantidad";
-            this.lbCantidad.Size = new System.Drawing.Size(113, 30);
+            this.lbCantidad.Size = new System.Drawing.Size(95, 25);
             this.lbCantidad.TabIndex = 24;
             this.lbCantidad.Text = "Cantidad";
             // 
             // txtPrecio
             // 
             this.txtPrecio.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecio.Location = new System.Drawing.Point(162, 154);
+            this.txtPrecio.Location = new System.Drawing.Point(122, 125);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(156, 37);
+            this.txtPrecio.Size = new System.Drawing.Size(118, 31);
             this.txtPrecio.TabIndex = 23;
             // 
             // lbPrecio
             // 
             this.lbPrecio.AutoSize = true;
             this.lbPrecio.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPrecio.Location = new System.Drawing.Point(62, 155);
+            this.lbPrecio.Location = new System.Drawing.Point(46, 126);
+            this.lbPrecio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbPrecio.Name = "lbPrecio";
-            this.lbPrecio.Size = new System.Drawing.Size(82, 30);
+            this.lbPrecio.Size = new System.Drawing.Size(69, 25);
             this.lbPrecio.TabIndex = 22;
             this.lbPrecio.Text = "Precio";
             // 
             // txtDescripcion
             // 
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(212, 95);
+            this.txtDescripcion.Location = new System.Drawing.Point(159, 77);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(526, 37);
+            this.txtDescripcion.Size = new System.Drawing.Size(396, 31);
             this.txtDescripcion.TabIndex = 21;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(62, 96);
+            this.label1.Location = new System.Drawing.Point(46, 78);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 30);
+            this.label1.Size = new System.Drawing.Size(119, 25);
             this.label1.TabIndex = 20;
             this.label1.Text = "Descripción";
             // 
@@ -111,45 +117,50 @@
             "3",
             "4",
             "5"});
-            this.cbCategoria.Location = new System.Drawing.Point(617, 44);
+            this.cbCategoria.Location = new System.Drawing.Point(349, 36);
+            this.cbCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(121, 33);
+            this.cbCategoria.Size = new System.Drawing.Size(206, 28);
             this.cbCategoria.TabIndex = 19;
-            
+            // 
             // lbCategoria
             // 
             this.lbCategoria.AutoSize = true;
             this.lbCategoria.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCategoria.Location = new System.Drawing.Point(468, 44);
+            this.lbCategoria.Location = new System.Drawing.Point(244, 36);
+            this.lbCategoria.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbCategoria.Name = "lbCategoria";
-            this.lbCategoria.Size = new System.Drawing.Size(121, 30);
+            this.lbCategoria.Size = new System.Drawing.Size(101, 25);
             this.lbCategoria.TabIndex = 18;
             this.lbCategoria.Text = "Categoria";
             // 
             // txtCodigo
             // 
             this.txtCodigo.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(162, 40);
+            this.txtCodigo.Location = new System.Drawing.Point(122, 32);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(156, 37);
+            this.txtCodigo.Size = new System.Drawing.Size(118, 31);
             this.txtCodigo.TabIndex = 17;
             // 
             // lbCodigo
             // 
             this.lbCodigo.AutoSize = true;
             this.lbCodigo.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCodigo.Location = new System.Drawing.Point(62, 40);
+            this.lbCodigo.Location = new System.Drawing.Point(46, 32);
+            this.lbCodigo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbCodigo.Name = "lbCodigo";
-            this.lbCodigo.Size = new System.Drawing.Size(94, 30);
+            this.lbCodigo.Size = new System.Drawing.Size(78, 25);
             this.lbCodigo.TabIndex = 16;
             this.lbCodigo.Text = "Codigo";
             // 
             // btnRegistrar
             // 
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(328, 323);
+            this.btnRegistrar.Location = new System.Drawing.Point(246, 262);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(160, 87);
+            this.btnRegistrar.Size = new System.Drawing.Size(120, 71);
             this.btnRegistrar.TabIndex = 14;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
@@ -157,9 +168,9 @@
             // 
             // RegistrarProducto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.nudCantidad);
             this.Controls.Add(this.lbCantidad);
             this.Controls.Add(this.txtPrecio);
@@ -171,6 +182,7 @@
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lbCodigo);
             this.Controls.Add(this.btnRegistrar);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "RegistrarProducto";
             this.Text = "RegistrarProducto";
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
