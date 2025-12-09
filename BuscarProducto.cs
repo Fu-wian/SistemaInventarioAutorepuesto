@@ -27,6 +27,8 @@ namespace SistemaInventarioAutorepuesto
             InitializeComponent();
             logicaBuscar = new CLBuscarProductos();
             pantallaPrincipal = principal;
+            this.Load -= BuscarProducto_Load;
+            this.Load += BuscarProducto_Load;
         }
 
         private void ConfigurarDataGridView()
@@ -50,11 +52,22 @@ namespace SistemaInventarioAutorepuesto
                 cbCategorias.SelectedIndex = 0;
         }
 
+        List<CTProductosDGV> productos = new List<CTProductosDGV>();
+        private void CargarCatalogos() {
+            dgvProductos.AutoGenerateColumns = true;
+            productos = logicaBuscar.CargarCatalogo() ?? new List<CTProductosDGV>();
+            dgvProductos.DataSource = productos;
+
+            FormatearColumnasDGV();
+        }
+
         private void BuscarProducto_Load(object sender, EventArgs e)
         {
             cbCategorias.DropDownStyle = ComboBoxStyle.DropDownList;
             CargarCategorias();
             ConfigurarDataGridView();
+            CargarCatalogos();
+            FormatearColumnasDGV();
         }
 
         private void FormatearColumnasDGV()//Cambiar de acuerdo al Formato del Base de Datos
@@ -104,8 +117,6 @@ namespace SistemaInventarioAutorepuesto
 
                 string filtro = cbCategorias.SelectedItem.ToString();
                 string texto = txtCodigo.Text?.Trim() ?? string.Empty;
-
-                List<CTProductosDGV> productos = new List<CTProductosDGV>();
 
                 // Determinar acción según el filtro seleccionado
                 switch (filtro)

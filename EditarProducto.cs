@@ -1,14 +1,15 @@
-﻿using System;
+﻿using CapaLogica;
+using CapaTabla;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CapaLogica;
-using CapaTabla;
 
 //Componentes utilizados:
 //txtCodigo - txtDescripcion - cbCategoria - txtPrecio - nudCantidad - btnBuscarEditar - btnEditar - btnBorra - btConfirmar
@@ -86,6 +87,14 @@ namespace SistemaInventarioAutorepuesto
 
                 LimpiarCampos();
                 DeshabilitarCampos();
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show(
+                    "Error al eliminar el producto",
+                    "Error",
+                    MessageBoxButtons.OK
+                );
             }
             catch (Exception ex)
             {
@@ -172,7 +181,6 @@ namespace SistemaInventarioAutorepuesto
             cbCategoria.ValueMember = "Key";
             cbCategoria.SelectedIndex = -1;
         }
-
         private void DeshabilitarCampos()
         {
             txtDescripcion.Enabled = false;

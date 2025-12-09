@@ -59,5 +59,16 @@ namespace CapaLogica
                 throw new Exception("Error en la capa lógica (BuscarPorCategoria): " + ex.Message, ex);
             }
         }
+        public List<CTProductosDGV> CargarCatalogo()
+        {
+            try
+            {
+                return buscarProductos.CargarCatalogo() ?? new List<CTProductosDGV>();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error en la capa lógica (CargarCatalogo): " + ex.Message, ex);
+            }
+        }
     }
 }

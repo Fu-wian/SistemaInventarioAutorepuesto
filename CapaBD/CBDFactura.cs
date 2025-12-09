@@ -13,25 +13,35 @@ namespace CapaBD
     {
         public int InsertarFactura(CTFactura fac)
         {
-            using (SqlConnection con = ObtenerConexion())
-            {
-                con.Open();
+            try 
+            { 
+                using (SqlConnection con = ObtenerConexion())
+                {
+                    con.Open();
 
-                SqlCommand cmd = new SqlCommand("INSERT INTO Factura (FechaEmision, IDemp, Estado, Subtotal, Impuesto, Total) " + "OUTPUT INSERTED.IDFactura " + "VALUES (@FechaEmision, @IDemp, @Estado, @Subtotal, @Impuesto, @Total)", con);
+                    SqlCommand cmd = new SqlCommand("INSERT INTO Factura (FechaEmision, IDemp, Estado, Subtotal, Impuesto, Total) " + "OUTPUT INSERTED.IDFactura " + "VALUES (@FechaEmision, @IDemp, @Estado, @Subtotal, @Impuesto, @Total)", con);
 
-                cmd.Parameters.AddWithValue("@FechaEmision", fac.FechaEmision);
-                cmd.Parameters.AddWithValue("@IDemp", fac.IDemp);
-                cmd.Parameters.AddWithValue("@Estado", fac.Estado);
-                cmd.Parameters.AddWithValue("@Subtotal", fac.Subtotal);
-                cmd.Parameters.AddWithValue("@Impuesto", fac.Impuesto);
-                cmd.Parameters.AddWithValue("@Total", fac.Total);
+                    cmd.Parameters.AddWithValue("@FechaEmision", fac.FechaEmision);
+                    cmd.Parameters.AddWithValue("@IDemp", fac.IDemp);
+                    cmd.Parameters.AddWithValue("@Estado", fac.Estado);
+                    cmd.Parameters.AddWithValue("@Subtotal", fac.Subtotal);
+                    cmd.Parameters.AddWithValue("@Impuesto", fac.Impuesto);
+                    cmd.Parameters.AddWithValue("@Total", fac.Total);
 
-                return (int)cmd.ExecuteScalar();
+                    return (int)cmd.ExecuteScalar();
+                }
             }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al insertar datos a la factura: " + ex.Message);
+            }
+
         }
 
         public void InsertarDetalles(int idFactura, DataTable tabla)
         {
+            try
+            {
             using (SqlConnection con = ObtenerConexion())
             {
                 con.Open();
@@ -50,6 +60,12 @@ namespace CapaBD
                     cmd.ExecuteNonQuery();
                 }
             }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al insertar detalles de la facturacion: " + ex.Message);
+            }
+
         }
     }
 }

@@ -1,6 +1,7 @@
-﻿using System;
-using CapaBD;
+﻿using CapaBD;
 using CapaTabla;
+using System;
+using System.Collections.Generic;
 
 namespace CapaLogica
 {
@@ -60,5 +61,6 @@ namespace CapaLogica
 
             return result;  // 1 = éxito, 0 = error
         }
+
     }
 }
