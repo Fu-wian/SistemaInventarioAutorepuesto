@@ -116,6 +116,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RegistrarProducto.resx">
       <DependentUpon>RegistrarProducto.cs</DependentUpon>
@@ -142,6 +143,15 @@
       <Project>{5505b900-1f31-4af4-bc1f-adeeba0e5eab}</Project>
       <Name>CapaTabla</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_logo_utp_-_cmyk_oficial.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UTP_LOGO_CIRCLE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fisc.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

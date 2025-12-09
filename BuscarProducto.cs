@@ -102,6 +102,15 @@ namespace SistemaInventarioAutorepuesto
         {
             try
             {
+                // Clear previous results to avoid showing old data
+                dgvProductos.DataSource = null;
+                productos = new List<CTProductosDGV>();
+                if (dgvProductos.Columns.Count > 0)
+                {
+                    // Safe clear of rows when DataSource is null
+                    dgvProductos.Rows.Clear();
+                }
+
                 // Validar selección
                 if (cbCategorias.SelectedItem == null)
                 {

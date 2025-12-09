@@ -9,11 +9,10 @@ namespace CapaBD
     public class CBDBuscarProductos : Conexion
     {
 
-        List<CTProductosDGV> lista = new List<CTProductosDGV>();
-
         // Método para buscar por ID
         public List<CTProductosDGV> BuscarPorID(string idProducto)
         {
+            List<CTProductosDGV> lista = new List<CTProductosDGV>();
             try
             {
                 using (SqlConnection cn = ObtenerConexion())
@@ -49,6 +48,7 @@ namespace CapaBD
         // Método para buscar por nombre
         public List<CTProductosDGV> BuscarPorNombre(string nombreP)
         {
+            List<CTProductosDGV> lista = new List<CTProductosDGV>();
             try
             {
                 using (SqlConnection cn = ObtenerConexion())
@@ -85,6 +85,7 @@ namespace CapaBD
         // Método para buscar por categoría (descripcion)
         public List<CTProductosDGV> BuscarPorCategoria(string descripcionCategoria)
         {
+            List<CTProductosDGV> lista = new List<CTProductosDGV>();
             try
             {
                 using (SqlConnection cn = ObtenerConexion())
@@ -119,8 +120,9 @@ namespace CapaBD
         }
 
 
-        public List<CTProductosDGV> CargarCatalogo() 
+        public List<CTProductosDGV> CargarCatalogo()
         {
+            List<CTProductosDGV> lista = new List<CTProductosDGV>();
             try
             {
                 using (SqlConnection cn = ObtenerConexion())
